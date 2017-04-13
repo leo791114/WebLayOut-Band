@@ -17,3 +17,43 @@
 .person:hover {
     border-color: #f1f1f1;
 }
+
+
+/*Style carousel*/
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    /*make all photos black and white*/
+    width: 100%;
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+        /*visibility: hidden;*/
+        /*Hide the carousel text when the screen is less than 600px wide*/
+    }
+}
+
+
+/*Tour Dates*/
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+    text-align: center;
+}
+
+.bg-1 h3 {
+    color: #fff;
+}
+
+.bg-1 p {
+    font-style: italic;
+}
