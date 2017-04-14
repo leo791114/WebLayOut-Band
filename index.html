@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWLj666wdixRwJ5ZbSud__yE3oSFTjFBQ&callback=myMap"></script>
     <title>Band</title>
 
 </head>
@@ -110,8 +111,120 @@
                 <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li>
                 <li class="list-group-item">November <span class="badge">3</span></li>
             </ul>
+            <div class="row" id="nail">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="./../../image/newyork.jpg" alt="NY">
+                        <p><strong>New York</strong></p>
+                        <p>Sat. 28 November 2015</p>
+                        <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="./../../image/paris.jpg" alt="Paris">
+                        <p><strong>Paris</strong></p>
+                        <p>Friday 27 November 2015</p>
+                        <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="./../../image/sanfran.jpg" alt="San Francisco">
+                        <p><strong>San Francisco</strong></p>
+                        <p>Sunday 29 November 2015</p>
+                        <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!--Modal-->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!--Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span>Tickets</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"><span class="glyphicon glyhpicon-shopping-cart"></span>Tickets, $23 per person</label>
+                            <input type="number" class="form-control" id="psw" placeholder="How many?">
+                        </div>
+                        <div class="form-group">
+                            <label for="username"><span class="glyphicon glyphicon-user"></span>Send To</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter email">
+                        </div>
+                    </form>
+                    <button type="submit" class="btn btn-block">Pay<span class="glyphicon glyphicon-ok"></span></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default btn-danger pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove">Cancel</span></button>
+                    <p>Need <a href="#">help?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact-->
+    <div class="container" id="contact">
+        <h3>Contact</h3>
+        <p><em>We love our fans! </em></p>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Fan? Drop a note</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
+                <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" type="text" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" rows="5" id="comments" name="comments" placeholder="Comment"></textarea>
+                <br>
+                <!--Have some extra padding effect-->
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Tabs part-->
+    <div class="container">
+        <h3 class="text-center">From The Blog</h3>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#mike" data-toggle="tab">Mike</a></li>
+            <li><a href="#chandler" data-toggle="tab">Chandler</a></li>
+            <li><a href="#peter" data-toggle="tab">Peter</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="mike" class="tab-pane fade in active">
+                <h2>Mike Ross, Manager</h2>
+                <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+            </div>
+            <div id="chandler" class="tab-pane fade">
+                <h2>Chandler Bing, Guitarist</h2>
+                <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+            </div>
+            <div id="peter" class="tab-pane fade">
+                <h2>Peter Griffin, Bass player</h2>
+                <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+            </div>
+        </div>
+    </div>
+    <!--Google map-->
+    <div id="googleMap"></div>
+
 </body>
 
 </html>

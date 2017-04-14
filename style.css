@@ -47,13 +47,86 @@
 .bg-1 {
     background: #2d2d30;
     color: #bdbdbd;
-    text-align: center;
 }
 
 .bg-1 h3 {
     color: #fff;
+    text-align: center;
 }
 
 .bg-1 p {
     font-style: italic;
+    text-align: center;
+}
+
+
+/*Lists, Thumbnails and Buttons*/
+
+#nail,
+.thumbnail {
+    text-align: center;
+}
+
+.list-group-item:first-child {
+    /*border-radius: 0;*/
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+    /*border-radius: 0;*/
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.thumbnail {
+    border: none;
+    padding: 0 0 15px 0;
+    border-radius: 0;
+    /*remove border and add padding to thumbnails*/
+}
+
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+.thumbnail .btn:hover,
+.thumbnail .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*Modal*/
+
+.modal-header,
+h4,
+.close {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header,
+.modal-body {
+    padding: 40px 50px;
+}
+
+
+/*Contact*/
+
+#contact h3,
+#contact>p {
+    text-align: center;
 }
