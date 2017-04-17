@@ -2,7 +2,7 @@
     padding: 80px 120px;
 }
 
-#the_band {
+#band {
     text-align: center;
 }
 
@@ -129,4 +129,124 @@ h4,
 #contact h3,
 #contact>p {
     text-align: center;
+}
+
+
+/*Tabs*/
+
+.nav-tabs li a {
+    color: #777;
+}
+
+
+/*google map*/
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+
+/*Navbar*/
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+.navbar .navbar-nav li a,
+.navbar .navbar-brand {
+    color: #d5d5d5;
+}
+
+.navbar .navbar-nav li a:hover {
+    color: #fff;
+}
+
+.navbar .container-fluid .collapse .navbar-nav li.active a {
+    color: #fff;
+    background-color: #29292c;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555;
+}
+
+.dropdown .dropdown-menu li a {
+    color: #000;
+}
+
+.dropdown .dropdown-menu li a:hover {
+    background-color: red;
+}
+
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer .glyphicon {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+
+/*Slide Effect*/
+
+.slideadmin {
+    visibility: hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animaiton-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    to {
+        opacitiy: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
